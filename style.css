@@ -33,7 +33,12 @@
 /* ---------- Reset / base ---------- */
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;   /* stop Android/iOS font auto-inflation */
+          text-size-adjust: 100%;
+  overflow-x: hidden;               /* guard against sideways scroll / zoom-out */
+}
 
 body {
   counter-reset: sec;
